@@ -422,6 +422,12 @@ h2 {
   .one-half{
     margin: 1% 0 1% 5%;
   }
+
+  .image{
+    background: url("http://24.media.tumblr.com/099c42601f3a0f62006b2e0e0e801cb7/tumblr_mzxy76Qj2x1scx9owo1_250.jpg") repeat fixed 100%;
+    background-size: cover;
+  
+  }
   
   .connection li a{
     font-size: 130%;
