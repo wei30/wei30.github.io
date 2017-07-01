@@ -39,7 +39,7 @@ input{
   height: 330px;
   width: 250px;
   position: relative;
-  top: -288px;
+  top: -268px;
   left: -23px;
   background-color: lightblue;
   opacity: .5; 
@@ -72,3 +72,5 @@ input{
   }
   
 }
+
+
