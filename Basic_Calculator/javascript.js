@@ -1,7 +1,7 @@
 //building a simple calculator
 $(document).ready(function(){
   $('#slider').click(function(){ //click the slider to change the position of the slider
-    $('#cover').css("top", "-660px");
+    $('#cover').css("top", "-640px");
     $(this).hide(); //hide the slider after the slider cicked 
 	$('#cover').click(function(){ //cover back the calculator 
 		$(this).css("top", "-322px"); //move back the cover to the original position
