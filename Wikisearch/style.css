@@ -1,0 +1,37 @@
+h1{
+  position: relative;
+  left: 40%;
+  top: 100px;
+  
+}
+input{
+  position: relative;
+  left: 500px;
+  top: 90px;
+}
+
+#randompic{
+  position: relative;
+  left: 140px;
+  top: -20px;
+  cursor: pointer;
+  -webkit-animation: rotate 30s infinite linear;
+}
+@-webkit-keyframes rotate {
+  0% {-webkit-transform:
+  rotate(0deg);}
+  100% {-webkit-transform:
+  rotate(360deg);}
+}
+
+button{
+  position: relative;
+  left: 160px;
+  top: 89px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#display_items{
+  list-style-type:none;
+}

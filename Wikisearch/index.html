@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Wikipedia Viewer</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+		<script src="js/jquery-1.5.min.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</head>
+	<body>
+
+    <h1>Wiki Search</h1>
+    <input id="search"></input>
+   <a href="https://en.wikipedia.org/wiki/Special:Random" target="none"> <img id="randompic" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" height="105px" width="105px"/> </a>
+  
+<img src=data:image/png;base64,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>
+  <button id ="find" type="button" class="btn btn-info">Find</button>
+  <br />
+    <br />
+  
+  <div id="display_items" class="container"></div>
+  
+  </body>
+
+</html>

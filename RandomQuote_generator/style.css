@@ -1,0 +1,67 @@
+body{
+  width: 100%
+}
+
+canvas{ 
+  margin-left: 20%;
+  margin-top: 1%;
+}
+
+button{
+  position: absolute;
+  top: 630px;
+  left: 780px;
+}
+
+header{
+  padding: 1em;
+  color: white;
+  background-color: black;
+  clear: left;
+  text-align: center;
+  font-size: 2em;
+  
+}
+
+footer{
+  position: absolute;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 99%;
+}
+
+
+#imageLantern{
+ position: absolute;
+ left: 1100px;
+ top: 200px;
+ width: 200px;
+ height: 250px;
+}
+
+#imageLantern1{
+ position: absolute;
+ left: 1100px;
+ top: 600px;
+ width: 200px;
+ height: 250px;
+}
+
+#imageLantern2{
+ position: absolute;
+ left: 30px;
+ top: 200px;
+ width: 200px;
+ height: 250px;
+}
+
+#imageLantern3{
+ position: absolute;
+ left: 30px;
+ top: 600px;
+ width: 200px;
+ height: 250px;
+}
+
+

@@ -1,0 +1,236 @@
+
+<!-- source An animated solar system
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+-->
+<!Doctype html>
+<html>
+  <head>
+  <style>
+  body{
+ // background-color: black;
+  background-image: url('sky4.jpg');
+
+  }
+  h1{
+  color: white;
+  }
+  </style>
+  <script type = "text/javascript">
+  //add the images of each planets
+     var sun = new Image();
+	 var earth = new Image();
+	 var moon = new Image();
+	 var mercury = new Image();
+	 var venus = new Image();
+	 var mars = new Image();
+	 var jupiter = new Image();
+	 var saturn = new Image();
+	 var uranus = new Image();
+	 var neptune = new Image();
+	 var pluto = new Image();
+
+
+	 function start(){
+	 	sun.src = 'sun.jpg';
+	 	earth.src = 'earth.jpeg';
+	 	moon.src = 'moon.jpg';
+	 	mercury.src = 'mercury.jpeg';
+	 	venus.src = 'venus.jpeg';
+        mars.src = 'mars.jpg';
+        jupiter.src = 'jupiter.jpg';
+        saturn.src = 'saturn.jpg';
+        uranus.src = 'uranus.jpg';
+        neptune.src = 'neptune.jpg';
+        pluto.src = 'pluto.jpeg';
+	 
+	 window.requestAnimationFrame(draw); //call the draw function
+	 }
+	 function draw(){
+	   var context = document.getElementById('mycanvas').getContext('2d');
+       context.globalCompositeOperation = 'lighter'; //add this so image won't overlap each other
+       context.clearRect(0,0,1000,1000);
+       //earth
+       context.save();
+       context.translate(540, 285); //rotate to the arc position
+       var time = new Date(); 
+       //each of the rotation is estimated
+       //context.rotate(degree * Math.PI/180)
+       //rotate the earth by 36 degree, the bigger the degree, the faster the rotation 
+       //calculation: 36*(60 seconds) = 2160/360 = 6(loop the arc 6 times in 60 seconds)
+       
+       context.rotate(((36 * Math.PI) / 180) * time.getSeconds() + ((0.036 * Math.PI) / 180) * time.getMilliseconds()); 
+       context.translate(120, 0);
+       context.drawImage(earth, -17, -17, 36, 36);
+
+       //Moon
+       //rotate the moon by 78 degree
+       //calculation: 78*(60seconds) = 4680/360 = 13(loop the arc by 13 times in 60 seconds)
+       context.rotate(((78*Math.PI) / 180) * time.getSeconds() + ((0.078 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(0, 28.5);
+       context.drawImage(moon, -3.5, -3.5, 10, 10);
+       context.restore();
+      
+       //mercury
+       //rotate the mercury by 60 degree
+       //calculation: 60*(60seconds) = 3600/360 = 10(loops the arc by 10 times in 60 seconds)
+       context.save();
+       context.translate(540, 285);
+       context.rotate(((60*Math.PI) / 180) * time.getSeconds() + ((0.060 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(80, 0);
+       context.drawImage(mercury, -10, -10, 20, 20);
+       context.restore();
+
+       //venus
+       //rotate the venus by 42 degree 
+       //calculation: 42 * (60 seconds) = 2520/360 = 7(loops the arc by 7 times in 60 seconds)
+       context.save();
+       context.translate(540, 285);
+        context.rotate(((42*Math.PI) / 180) * time.getSeconds() + ((0.042 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(100, 0);
+       context.drawImage(venus, -16, -16, 35, 35);
+       context.restore();
+
+       //mars
+       //rotate the mars by 30 degree
+       //calculation: 30 * 60 seconds = 1800/360 = 5(loops the arc by 5 times in 60 seconds)
+       context.save();
+       context.translate(540, 285);
+       context.rotate(((30*Math.PI) / 180) * time.getSeconds() + ((0.030 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(150,0);
+       context.drawImage(mars, -11, -11, 22, 22);
+       context.restore();
+
+       //jupiter
+       //rotate the jupiter by 18 degree
+       //calculation: 18 * 60 seconds = 1080/360 = 3(loops the arc by 3 times in 60 seconds)
+       context.save();
+       context.translate(540, 285);
+        context.rotate(((18*Math.PI) / 180) * time.getSeconds() + ((0.018 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(175,0);
+       context.drawImage(jupiter, -25, -25, 42, 42);
+       context.restore();
+
+       //saturn
+       //rotate the saturn by 12 degree
+       //calculation: 12 * 60 seconds = 720/360 = 2(loops the arc by 2 times in 60 seconds)
+       context.save();
+       context.translate(540, 285);
+        context.rotate(((12*Math.PI) / 180) * time.getSeconds() + ((0.012 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(200, 0);
+       context.drawImage(saturn, -22, -22, 39, 39);
+       context.restore();
+
+       //uranus
+       //rotate the uranus by 8.4 degree
+       //calculation: 8.4 * 60 seconds = 504/360(whole circle) = 1.4(loops the arc by 1.4 times in 60 seconds)
+       //the uranus planet in 60 seconds rotate 1.4 which is not whole number, the second loop only rotate 40% of the arc,
+       // the planet start at 0 again
+       context.save();
+       context.translate(540, 285);
+       context.rotate(((8.4*Math.PI) / 180) * time.getSeconds() + ((0.0084 *Math.PI) / 180) * time.getMilliseconds());
+       context.translate(230, 0);
+       context.drawImage(uranus, -20, -20, 38, 38);
+       context.restore();
+       
+       //neptune
+       //rotate the neptune by 6.6 degree
+       //calculation: 6.6 * 60 seconds = 396/360 = 1.1(loops the arc by 1.1 times in 60 seconds)
+       //in 60 seconds neptune loops 1 arc and 10% of the second loop, and return to 0 again to loop 
+       context.save();
+       context.translate(540, 285);
+       context.rotate(((6.6*Math.PI) / 180) * time.getSeconds() + ((0.0066*Math.PI) / 180) * time.getMilliseconds());
+       context.translate(260, 0);
+       context.drawImage(neptune, -20, -20, 38, 38);
+       context.restore();
+
+
+
+       //pluto
+       //rotate the pluto by 6 degree
+       //calculation: 6 * 60 seconds = 360/360 = 1(in 60 seconds, pluto loop one time)
+       //pluto is the slowest out of all planets and this the slowest the context.rotate can rotate in 60 seconds that is 
+       //whole number. 
+       context.save();
+       context.translate(540, 285);
+       context.rotate((6*Math.PI/180) * time.getSeconds() + ((0.006*Math.PI) / 180) * time.getMilliseconds());
+       context.translate(280, 0);
+       context.drawImage(pluto, -3, -3, 6, 6);
+       context.restore();  
+
+       //Static picture, no need to redraw
+       context.beginPath();
+	   context.drawImage(sun, 480, 225, 120, 120);
+	   context.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+	   context.arc(540, 285, 120, 0*Math.PI, Math.PI*2);
+	   context.stroke();
+       
+       //red ring
+       context.beginPath();
+	   context.arc(540, 285, 150, 0*Math.PI, Math.PI*2);
+	   context.strokeStyle = 'red';
+       context.stroke();
+     
+       //blue ring
+       context.beginPath();
+       context.arc(540, 285, 175, 0, Math.PI*2);
+       context.strokeStyle = 'blue';
+       context.stroke();
+
+       //pink ring
+       context.beginPath();
+       context.arc(540, 285, 200, 0, Math.PI*2);
+       context.strokeStyle = 'rgb(255, 102, 153)';
+       context.stroke();
+
+       //greenish and yellowish ring
+       context.beginPath();
+       context.arc(540, 285, 230, 0, Math.PI*2);
+       context.strokeStyle = 'rgb(204, 255, 102)';
+       context.stroke();
+
+       //light purple ring
+       context.beginPath();
+       context.arc(540, 285, 260, 0, Math.PI*2);
+       context.strokeStyle = 'rgb(204, 204, 255)';
+       context.stroke();
+
+       //light yellow ring
+       context.beginPath();
+       context.arc(540, 285, 280, 0, Math.PI*2);
+       context.strokeStyle = 'rgb(255, 255, 204)';
+       context.stroke();
+
+       //green ring
+       context.beginPath();
+       context.arc(540, 285, 100, 0, Math.PI*2);
+       context.strokeStyle = 'green';
+       context.stroke();
+
+       //gray ring
+       context.beginPath();
+       context.arc(540, 285, 80, 0, Math.PI*2);
+       context.strokeStyle = 'gray';
+       context.stroke();
+
+
+
+	   window.requestAnimationFrame(draw); // repeat the draw function, to make the earth rotate
+	   }
+	   start();
+	   
+  
+  
+  </script>
+  </head>
+  <body>
+  
+  <h1>Solar System, Planets Movement Animation</h1>
+  <canvas id="mycanvas" width="1000" height="1000"></canvas>
+  
+  </body>
+
+
+
+
+
+</html>

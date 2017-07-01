@@ -1,0 +1,74 @@
+.container{
+  width: 250px;
+  height: 330px;
+  background-color: lightblue;
+  margin: 0 auto;
+  border: solid 8px grey;
+}
+#display{
+  width: 230px;
+  height: 60px;
+  margin-left: -12.5px;
+  
+}
+input{
+  width: 230px;
+  height: 60px;
+  text-align: right;
+}
+.space{
+  margin-left: 7px;
+  margin-right: 6px;
+  margin-bottom: 4.5px;
+}
+#decimal{
+  margin-left: 3px;
+  margin-right: 7.5px;
+  padding-right: 10.5px;
+  padding-left: 20px;
+}
+#off{
+  margin-left: 30px;
+}
+
+#multiple{
+  padding-right: 16px;
+}
+
+#cover{
+  height: 330px;
+  width: 250px;
+  position: relative;
+  top: -288px;
+  left: -23px;
+  background-color: lightblue;
+  opacity: .5; 
+  text-align: center;
+  font-size: 30px;
+}
+#slider{
+  position: relative;
+  top: -420px;
+  left: 50px;
+  border-radius: 50%;
+  height: 80px;
+  width: 100px;
+  -webkit-animation: slider 2s infinite;
+  -webkit-animation-direction: normal;
+  animation: slider 2s infinite;
+  animation-direction: normal;
+  opacity: 0.7;
+  
+}
+@keyframes slider{
+  0% 30% 60% 100%{
+    top: -420px;
+  }  
+  40%{
+    top: -440px;
+  }
+  50%{
+    top: -470px;     
+  }
+  
+}

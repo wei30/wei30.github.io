@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register-form</title>
+  <style>
+    body{
+      background-color: white;
+    }
+    .image{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: dotted;
+      left: 550px;
+      top: 5px;
+    }
+    .box{
+      margin-left: 40px;
+      margin-top: 30px;
+      width: 100px;
+      height: 100px;
+      border: solid;
+    }
+    .Form{
+      position: absolute;
+      left: 490px;
+      top: 300px;
+      
+      width: 400px;
+      background-color: #f2f2f2;
+
+
+    } 
+
+ .fileinput-button input {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter:'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+  
+}
+ button{
+  position: absolute;
+  left: 610px;
+  top: 190px;
+ }
+ 
+ #imagelogo{
+  position: absolute;
+  left: 580px;
+  top: 18px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+ }
+
+ #imagelocation{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+ 
+ }
+.error{
+  color: red;
+ }
+
+ .valid{
+  color: green;
+ }
+
+  
+    }
+  </style>
+  <script src="js/jquery-1.5.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+ 
+ 
+  <script type="text/javascript">
+    $("document").ready(function(){
+        
+       $('.register_form').validate({
+          rules: {
+            name: {
+              required: true
+            },
+            username: {
+              required: true
+            },
+            password: {
+              required: true,
+              minlength: 6
+             
+            },
+            email: {
+              required: true,
+              email: true
+                         
+            },
+            gender: {
+              required: true
+            },
+          },
+          messages: {
+            name: {
+              required: "Please fill out your name"
+            },
+            username: {
+              required: "Please create a username"
+            },
+            password: {
+              required: "Please create a password",
+              minlength: jQuery.validator.format("Please enter at least {0} characters")
+
+            },
+            email: {
+              required: "Please enter a valid email address"
+            },
+            gender: {
+              required: "Please pick one"
+            }
+          },
+          submitHandler:  function(form){
+            alert("You have submitted the form successfully");
+            form.submit();
+          }
+       });
+       
+       $('#hidepassword').hide();
+       $('#hidepassword').attr('readonly', 'readonly');
+       $('#hidepassword').blur(function(){
+           $('#hidepassword').val($(this).val());
+       });
+    
+         $("#inputfile").change(function(){
+          readURL(this);
+    });
+            
+    });
+       // source: https://jsfiddle.net/lesson8/9NeXg/
+         function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#imagelogo').attr('src', e.target.result);
+                $('#imagelogo').appendTo("#imagelocation");
+                
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+  </script>
+ 
+</head>
+<body>
+ <h1>Register Form &copy</h1>
+   <span class="fileinput-button">
+      <button>Insert Photo</button>
+      <input type="file" id="inputfile">
+   </span>
+   <div id="imagelocation"></div>
+
+   <image id="imagelogo" src="image.png"/>
+ 
+  <div class="Form">
+    <form class="register_form" action="#">
+      <label>Name:</label><br>
+       <input type="text" name="name" placeholder="NAME" >
+      <p></p>
+      
+      <label>Username:</label><br>
+      <input type="text" name="username" placeholder="USERNAME" >
+      <p></p>
+      
+      <label>Password:</label><br> 
+      <input type="password" name="password" placeholder="PASSWORD" >
+      <input type="text" id= "hidepassword"/>
+      <p></p>
+     
+      <label>Email: </label><br> 
+      <input type="text" name="email" placeholder="EMAIL" id="email">
+      <p></p>
+      
+      <label class="required">Sex Type: </label>
+      <div></div>
+      <label>Male</label>
+      &nbsp &nbsp<input type="radio" name="gender">
+      <p></p>
+      <label>Female</label>
+      <input type="radio" name="gender">
+      </label><br><br>
+      <p></p>
+      
+      <input type="reset" name="clear" value="Clear">
+      <input type="submit" name="register" value="Register" id="register_button">
+      
+
+    </form>
+
+   </div>
+</body>
+</html>
