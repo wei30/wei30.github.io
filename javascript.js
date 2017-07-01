@@ -24,7 +24,7 @@ $(document).ready(function(){
     $('#one').attr("src", "images/cal.png");
     $('#text1').text("Basic Calculator");
     $('#link1').attr("href", "https://github.com/wei30/Simple-Calculator");
-    $('#demo1').attr("href", "Basic_Calculator");
+    $('#demo1').attr("href", "https://codepen.io/wei30/full/XgjvOQ");
     $('#two').attr("src", "images/wiki1.png");
     $('#text2').text("Wiki Search");
     $('#link2').attr("href", "https://github.com/wei30/wei30.github.io.wikisearch");
