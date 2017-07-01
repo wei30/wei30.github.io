@@ -26,6 +26,7 @@ input{
   margin-right: 7.5px;
   padding-right: 10.5px;
   padding-left: 20px;
+  background-color: gray;
 }
 #off{
   margin-left: 30px;
@@ -39,7 +40,7 @@ input{
   height: 330px;
   width: 250px;
   position: relative;
-  top: -318px;
+  top: -322px;
   left: -23px;
   background-color: lightblue;
   opacity: .5; 
