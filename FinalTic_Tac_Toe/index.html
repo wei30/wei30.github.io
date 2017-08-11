@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+ <head>
+
+  <meta charset="utf-8"/>
+  <meta name ="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="js/jquery-1.5.min.js"></script>
+  <script type="text/javascript" charset='utf-8' src="javascript.js"></script>
+  <title>Tic Tac Toe</title>
+
+ </head>
+ <body>
+  <div class="begin">
+    <br/>
+    <input id='playername' type="text" name="PlayerName" placeholder = "Enter Player Name" value="" />
+    <br/>
+    <h2>Choose</h2>
+    <div class="buttons">
+      <button id="easy" class="btn btn-success">Easy</button>
+      <button id="hard" class="btn btn-danger">Hard</button>
+      <br/><br/>
+      <button id="bigO" class="btn btn-primary">O</button>
+      <button id="bigX" class="btn btn-primary">X</button>
+   
+      <br/><br/>
+      <button class="btn btn-warning" id="start" type="submit"> START</button>
+    </div>
+  </div>
+  
+  <div class="start_Game">
+    <div>
+      <img id="tictactoe" align ="middle" src="https://image.ibb.co/jHoUUk/tictactoe.png"/>
+    </div>
+
+   
+    <div class="twenty">
+      <img src="https://image.ibb.co/d0J9x5/score.png">
+      <div class="box"></div>
+      <div class="box1"></div>
+      <canvas id="myCanvas"></canvas>
+      <canvas id="myCanvas2"></canvas>
+    </div>
+   
+    <div class="thirty">
+       <table class="board">
+         <tr>
+          <td class="spot" id="0"></td>
+          <td class="spot" id="1"></td>
+          <td class="spot" id="2"></td>   
+         </tr>
+         <tr>
+          <td class="spot" id="3"></td>
+          <td class="spot" id="4"></td>
+          <td class="spot" id="5"></td>   
+         </tr>
+         <tr>
+          <td class="spot" id="6"></td>
+          <td class="spot" id="7"></td>
+          <td class="spot" id="8"></td>   
+         </tr>
+      </table>  
+    </div>
+     
+    <div class="ten">
+      <img id="restart" src="https://image.ibb.co/iELbs5/chalk.png"/>
+    </div>
+     
+  </div>   
+  
+  
+ </body>
+</html> 

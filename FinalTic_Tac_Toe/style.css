@@ -1,0 +1,107 @@
+body{
+  background: url(https://static1.squarespace.com/static/56c104061bbee09ca6eb4a7e/t/57dfd8bf29687f44745e6d7f/1474245788734/BlackChalkBoardLarge.jpg?format=1500w);
+background-size: cover;
+}
+.begin{
+  position: relative;
+  top: 20px;
+  margin-left: 40%;
+  width: 20%;
+  background-color: lightblue;
+  -webkit-animation: begin 2s ease;
+  -webkit-animation-direction: normal;
+  animation: begin 2s ease;
+  animation-direction: normal;
+}
+@keyframes begin{
+  0%{
+    top: 40px;
+  }
+  100%{
+    top: 20px;
+  }
+}
+
+input{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+h2{
+  text-align: center;
+  color: white;
+}
+.buttons{
+  text-align: center;
+}
+.start_Game{
+  display: none;
+}
+#tictactoe{
+  margin-left: 40%;
+  width: 300px;
+}
+.twenty{
+  width: 20%;
+  display: inline-block;
+  margin-left: 5%;
+}
+.thirty{
+  position: absolute;
+  width: 30%;
+  display: inline-block;
+  margin-left: 15%;
+}
+.ten{
+  width: 10%;
+  margin-left: 85%;
+}
+#restart{
+  cursor: pointer;
+}
+table{
+  background: url(https://image.ibb.co/mcTw9k/board.png);
+  background-size: cover;
+  margin-top: 3%; 
+  table-layout:fixed;
+}
+
+.box{
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 115px;
+  color: white;
+  left: 100px;
+}
+.box1{
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 115px;
+  color: white;
+  left: 180px;
+}
+#myCanvas{
+  width: 75px;
+  height: 20px;
+  position: absolute;
+  left: 80px;
+  top: 160px;
+}
+#myCanvas2{
+  width: 75px;
+  height: 20px;
+  position: absolute;
+  left: 170px;
+  top: 160px;
+}
+td{
+  text-align: center;
+  font-size: 200%;
+  color: white;
+  table-layout:fixed;
+  width: 110px;
+  height: 95px;
+}
