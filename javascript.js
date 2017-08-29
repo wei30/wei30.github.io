@@ -25,7 +25,7 @@ $(document).ready(function(){
     $('#text1').text("Basic Calculator");
     $('#link1').attr("href", "https://github.com/wei30/Simple-Calculator");
     $('#demo1').attr("href", "https://codepen.io/wei30/full/XgjvOQ");
-    $('#two').attr("src", "images/wiki1.png");
+    $('#two').attr("src", "images/tic.png");
     $('#text2').text("The Game Of TIC TAC TOE");
     $('#link2').attr("href", "https://github.com/wei30/TicTacToe");
     $('#demo2').attr("href", "FinalTic_Tac_Toe/index.html");
