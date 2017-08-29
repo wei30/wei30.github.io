@@ -26,9 +26,9 @@ $(document).ready(function(){
     $('#link1').attr("href", "https://github.com/wei30/Simple-Calculator");
     $('#demo1').attr("href", "https://codepen.io/wei30/full/XgjvOQ");
     $('#two').attr("src", "images/wiki1.png");
-    $('#text2').text("Wiki Search");
-    $('#link2').attr("href", "https://github.com/wei30/wei30.github.io.wikisearch");
-    $('#demo2').attr("href", "Wikisearch/index.html");
+    $('#text2').text("The Game Of TIC TAC TOE");
+    $('#link2').attr("href", "https://github.com/wei30/TicTacToe");
+    $('#demo2').attr("href", "FinalTic_Tac_Toe/index.html");
     $('#three').attr("src", "images/weather3.png");
     $('#text3').text("Local Weather");
     $('#link3').attr("href", "https://github.com/wei30/wei30.github.io-localweather");
