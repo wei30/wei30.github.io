@@ -238,7 +238,7 @@ span a i:hover{
 }
 /*end of profile**/
 .image {
-  background: url("http://www.imgbase.info/images/safe-wallpapers/animals/cat/55784_cat_cat_in_snow.jpg") repeat fixed 100%;
+  background: url("images/cat.jpg") repeat fixed 100%;
   opacity: 0.5;
   background-size: cover;
 }
@@ -402,7 +402,7 @@ h2 {
 }
 @media screen and (max-width: 1024px){
    .image{
-      background: url("https://lh3.googleusercontent.com/r7rV9Lyt9WReLmt7Bd3yTKvy1-FPf0Q3JIj3SlWFuyg5ScEBI1AcU9BrtG8PravjoQ=h900") repeat fixed 100%;
+      background: url("images/cat2.jpg") repeat fixed 100%;
       opacity: 0.5;
       background-size: cover;
    }
@@ -424,7 +424,7 @@ h2 {
   }
 
   .image{
-    background: url("http://24.media.tumblr.com/099c42601f3a0f62006b2e0e0e801cb7/tumblr_mzxy76Qj2x1scx9owo1_250.jpg") repeat fixed 100%;
+    background: url("images/polarbear.jpg") repeat fixed 100%;
     background-size: cover;
   
   }
